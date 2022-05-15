@@ -1,3 +1,5 @@
-# first-chrome-extension
+A Zettelkasten Chrome Extension
 
-Following along with [the developer chrome tutortial](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
+Highlight text and the page will change to show
+only the text highlighted and a textbox for your
+fleeting notes.
