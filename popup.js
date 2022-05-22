@@ -15,7 +15,7 @@ changeColor.addEventListener("click", async () => {
 
 	chrome.scripting.executeScript({
 		target: { tabId: tab.id },
-		function: setPageBackgroundColor,
+		function: saveSelectedText,
 	});
 });
 
@@ -23,9 +23,13 @@ changeColor.addEventListener("click", async () => {
 // The body of this function will be executed as a content script inside the 
 // current page
 
-function setPageBackgroundColor(){
+function saveSelectedText()
+{
+    let text; 
+    
+    if(window.getSelection())
+        text = window.getSelection().toString();
+    
 
-	chrome.storage.sync.get("color", ({ color }) => {
-		document.body.style.backgroundColor = color;
-	});
+    prompt("Press CTRL+C or CMD+C, then escape and paste into Roam.", "__"+text+"__ — via ["+document.title+"]("+location.href+") [[+Roam]]");
 }
