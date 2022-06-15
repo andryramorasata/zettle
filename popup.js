@@ -15,7 +15,7 @@ changeColor.addEventListener("click", async () => {
 
 	chrome.scripting.executeScript({
 		target: { tabId: tab.id },
-		function: saveSelectedText,
+		function: highlightText,
 	});
 });
 
@@ -23,7 +23,7 @@ changeColor.addEventListener("click", async () => {
 // The body of this function will be executed as a content script inside the 
 // current page
 
-function saveSelectedText()
+function highlightText()
 {
     let text; 
     

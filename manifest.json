@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "zettle",
+  "description": "zettelkasten straight to your Roam graph!",
   "version": "1.0",
   "manifest_version": 3,
   "background": { 
